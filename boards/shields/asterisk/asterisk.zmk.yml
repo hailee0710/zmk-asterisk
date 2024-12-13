@@ -1,0 +1,12 @@
+file_format: "1"
+id: asterisk
+name: Asterisk
+type: shield
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - pointer
+siblings:
+  - asterisk_left
+  - asterisk_right

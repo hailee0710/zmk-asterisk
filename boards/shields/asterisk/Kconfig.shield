@@ -1,0 +1,8 @@
+config SHIELD_ASTERISK_DONGLE
+	def_bool $(shields_list_contains,asterisk_dongle)
+
+config SHIELD_ASTERISK_LEFT
+	def_bool $(shields_list_contains,asterisk_left)
+
+config SHIELD_ASTERISK_RIGHT
+	def_bool $(shields_list_contains,asterisk_right)
