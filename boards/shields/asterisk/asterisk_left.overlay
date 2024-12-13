@@ -1,5 +1,5 @@
-#include "charybdis.dtsi"
-#include "charybdis_3610.dtsi"
+#include "asterisk.dtsi"
+#include "asterisk_3610.dtsi"
 
 &kscan0 {
 	
