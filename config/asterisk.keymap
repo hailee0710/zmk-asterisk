@@ -1,6 +1,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     trackball_listener {
@@ -61,6 +62,17 @@
         };
     };
 
+    macros {
+        macro: macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp P &kp H &kp I &kp M &kp M &kp E &kp O &kp M &kp E &kp O &kp DOT &kp C &kp O &kp M>;
+            label = "MACRO";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -80,11 +92,11 @@
         FN {
             label = "Function";
             bindings = <
-&kp   &kp   &kp   &kp   &kp   &kp   &kp   &kp   &kp   &kp   &kp   &kp 
-&kp   &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp 
-&kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp 
-&kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp 
-&kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp                    &kp    &kp 
+&kp GRAVE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
+&trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
+&trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
+&trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
+&trans     &trans  &trans  &trans  &trans  &macro  &trans  &trans                  &kp HOME  &kp END
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -93,12 +105,14 @@
         Mouse {
             label = "Mouse";
             bindings = <
-&kp   &kp   &kp   &kp   &kp   &kp   &kp   &kp   &kp   &kp   &kp   &kp 
-&kp   &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp 
-&kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp 
-&kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp 
-&kp    &kp    &kp    &kp    &kp    &kp    &kp    &kp                    &kp    &kp 
+&trans  &trans  &trans     &trans      &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans      &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mkp LCLK  &mkp MCLK   &mkp RCLK      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &kp K_BACK  &kp K_FORWARD  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans      &trans         &trans  &trans  &trans                  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
     };
 };
