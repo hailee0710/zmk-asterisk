@@ -29,6 +29,10 @@
 
 };
 
+&physical_layout0: physical_layout_0 {
+        kscan = <&kscan0>;
+};
+
 &spi0 {
     status = "okay";
 };

@@ -23,6 +23,10 @@
 
 };
 
+&physical_layout0: physical_layout_0 {
+        kscan = <&kscan0>;
+};
+
 &left_encoder {
     status = "okay";
 };
