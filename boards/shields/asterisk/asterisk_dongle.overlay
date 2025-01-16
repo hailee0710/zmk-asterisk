@@ -16,9 +16,9 @@
 
 };
 
-&physical_layout0: physical_layout_0 {
+&physical_layout0 {
         kscan = <&mock_kscan>;
-    };
+};
 
 / {
 	vtrackball: virtual_input_trackball {
