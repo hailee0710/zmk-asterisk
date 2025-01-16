@@ -92,11 +92,11 @@
         FN {
             label = "Function";
             bindings = <
-&kp GRAVE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
-&trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
-&trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
-&trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
-&trans     &trans  &trans  &trans  &trans  &macro  &trans  &trans                  &kp HOME  &kp END
+&kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5   &kp F6  &kp F7  &kp F8  &kp F9  &kp F10   &kp F11
+&trans     &trans  &trans  &trans  &trans  &kp F12  &trans  &trans  &trans  &trans  &trans    &trans
+&trans     &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans    &trans
+&trans     &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans    &trans
+&trans     &trans  &trans  &trans  &trans  &macro   &trans  &trans                  &kp HOME  &kp END
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -105,14 +105,14 @@
         Mouse {
             label = "Mouse";
             bindings = <
-&trans  &trans  &trans     &trans      &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans      &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mkp LCLK  &mkp MCLK   &mkp RCLK      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &kp K_BACK  &kp K_FORWARD  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans      &trans         &trans  &trans  &trans                  &trans  &trans
+&trans  &trans  &trans     &trans         &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans         &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mkp LCLK  &mkp MCLK      &mkp RCLK         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &kp C_AC_BACK  &kp C_AC_FORWARD  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans         &trans            &trans  &trans  &trans                  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
     };
 };
