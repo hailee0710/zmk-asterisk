@@ -92,7 +92,7 @@
                 &kp LCTRL  &kp LGUI  &kp LALT  &kp CAPS  &kp BSPC  &kp ENTER  &kp DELETE  &kp SPACE                      &kp LEFT  &kp RIGHT
             >;
 
-            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         FUNC_layer {
@@ -118,7 +118,7 @@
                 &trans  &trans  &trans     &trans         &trans            &trans  &trans  &trans                  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         };
     };
 };
