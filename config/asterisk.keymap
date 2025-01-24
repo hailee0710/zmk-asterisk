@@ -8,6 +8,7 @@
 #define BASE 0 // default layer
 #define FUNC 1 // 
 #define MOUSE 2 // mouse key layer
+#define SCROLL 3 // mouse key layer
 
 / {
     trackball_listener {
@@ -36,7 +37,7 @@
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <>;
+        layers = <1>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
@@ -119,6 +120,19 @@
             >;
 
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
+        };
+
+        SCROLL_layer {
+            label = "Scroll";
+            bindings = <
+                &trans  &trans  &trans     &trans         &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans     &trans         &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans     &trans         &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans     &trans         &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans     &trans         &trans            &trans  &trans  &trans                  &trans  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };
     };
 };
