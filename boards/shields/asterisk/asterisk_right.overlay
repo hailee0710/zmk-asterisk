@@ -10,6 +10,10 @@
     wakeup-source;
 };
 
+&physical_layout0 {
+        kscan = <&kscan0>;
+};
+
 &spi0 {
     status = "okay";
 };

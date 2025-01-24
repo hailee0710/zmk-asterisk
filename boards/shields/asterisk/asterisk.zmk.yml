@@ -8,6 +8,7 @@ features:
   - keys
   - pointer
   - encoder
+  - studio
 siblings:
   - asterisk_left
   - asterisk_right
