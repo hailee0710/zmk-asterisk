@@ -25,7 +25,7 @@
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
-        bindings = <&ib_wheel_scaler 1 12>;
+        bindings = <&ib_wheel_scaler 1 10>;
     };
 
     ib_wheel_scaler: ib_wheel_scaler {
@@ -102,7 +102,7 @@
 &trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans                  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         };
     };
 };
