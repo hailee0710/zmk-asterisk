@@ -25,7 +25,7 @@
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
-        bindings = <&ib_wheel_scaler 1 10>;
+        bindings = <&ib_wheel_scaler 1 6>;
     };
 
     ib_wheel_scaler: ib_wheel_scaler {
@@ -38,7 +38,7 @@
     ib_toggle_layer: ib_toggle_layer {
         compatible = "zmk,input-behavior-tog-layer";
         #binding-cells = <1>;
-        time-to-live-ms = <1000>;
+        time-to-live-ms = <2000>;
     };
 
     behaviors {
