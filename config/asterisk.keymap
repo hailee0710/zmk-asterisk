@@ -83,6 +83,24 @@
             key-positions = <56 57>;
             layers = <2>;
         };
+
+        scroller_left {
+            bindings = <&mo 1>;
+            key-positions = <27 26>;
+            layers = <0>;
+        };
+
+        scroller_right {
+            bindings = <&mo 1>;
+            key-positions = <27 26>;
+            layers = <0>;
+        };
+
+        scroller_low {
+            bindings = <&mo 1>;
+            key-positions = <56 57>;
+            layers = <0>;
+        };
     };
 
     keymap {
