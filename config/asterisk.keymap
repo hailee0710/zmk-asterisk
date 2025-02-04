@@ -86,13 +86,13 @@
 
         scroller_right {
             bindings = <&mo 1>;
-            key-positions = <27 26>;
+            key-positions = <32 33>;
             layers = <0 2>;
         };
 
         scroller_low {
             bindings = <&mo 1>;
-            key-positions = <56 57 1>;
+            key-positions = <56 57>;
             layers = <0 2>;
         };
     };
