@@ -79,19 +79,19 @@
         };
 
         scroller_left {
-            bindings = <&mo 1>;
+            bindings = <&mo 3>;
             key-positions = <27 26>;
             layers = <0 2>;
         };
 
         scroller_right {
-            bindings = <&mo 1>;
-            key-positions = <32 33>;
+            bindings = <&mo 3>;
+            key-positions = <27 26>;
             layers = <0 2>;
         };
 
         scroller_low {
-            bindings = <&mo 1>;
+            bindings = <&mo 3>;
             key-positions = <56 57>;
             layers = <0 2>;
         };
@@ -131,11 +131,24 @@
         MOUSE {
             label = "Mouse";
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans     &trans     &trans  &trans     &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans     &trans     &trans  &trans     &trans
-&mo 1   &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans     &mo 1
-&trans  &trans  &trans  &mkp MB4   &mkp MB5   &trans  &trans  &mkp MB4   &mkp MB5   &trans  &trans     &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans                        &mkp LCLK  &mkp RCLK
+&trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans     &trans     &trans  &trans     &trans
+&trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans     &trans     &trans  &trans     &trans
+&mo 1   &trans  &trans  &mkp LCLK  &mkp RCLK  &mkp MB4  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans     &mo 1
+&trans  &trans  &trans  &trans     &trans     &mkp MB5  &trans  &mkp MB4   &mkp MB5   &trans  &trans     &trans
+&trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans                        &mkp LCLK  &mkp RCLK
+            >;
+
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
+        };
+
+        Scroll {
+            label = "Scroll";
+            bindings = <
+&trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans     &trans     &trans  &trans     &trans
+&trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans     &trans     &trans  &trans     &trans
+&mo 1   &trans  &trans  &mkp LCLK  &mkp RCLK  &mkp MB4  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans     &mo 1
+&trans  &trans  &trans  &trans     &trans     &mkp MB5  &trans  &mkp MB4   &mkp MB5   &trans  &trans     &trans
+&trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans                        &mkp LCLK  &mkp RCLK
             >;
 
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
