@@ -20,7 +20,7 @@
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <1>;
+        layers = <3>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
@@ -86,7 +86,7 @@
 
         scroller_right {
             bindings = <&mo 3>;
-            key-positions = <27 26>;
+            key-positions = <32 33>;
             layers = <0 2>;
         };
 
@@ -129,6 +129,7 @@
         };
 
         MOUSE {
+            display-name = "Mouse";
             label = "Mouse";
             bindings = <
 &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans     &trans     &trans  &trans     &trans
@@ -142,6 +143,7 @@
         };
 
         Scroll {
+            display-name = "Scroll";
             label = "Scroll";
             bindings = <
 &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans     &trans     &trans  &trans     &trans
