@@ -97,11 +97,11 @@
         MOUSE {
             label = "Mouse";
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans     &trans     &trans     &trans     &trans
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans     &trans     &trans     &trans     &trans
-&trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans     &trans
-&trans  &trans  &trans     &mkp MB4   &mkp MB5   &trans  &trans  &mkp MB4   &mkp MB5   &trans     &trans     &trans
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans                           &mkp LCLK  &mkp RCLK
+&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans     &trans     &trans    &trans     &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans     &trans     &trans    &trans     &trans
+&trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp MB2  &trans     &trans
+&trans  &trans  &trans     &mkp MB4   &mkp MB5   &trans  &trans  &mkp MB4   &mkp MB5   &trans    &trans     &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans                          &mkp LCLK  &mkp RCLK
             >;
 
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
