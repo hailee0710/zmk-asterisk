@@ -124,11 +124,11 @@
             display-name = "Function";
             label = "Function";
             bindings = <
-&kp GRAVE  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5       &kp F6       &kp F7    &kp F8    &kp F9     &kp F10        &kp F11
-&trans     &trans  &trans     &trans     &trans     &kp F12      &trans       &trans    &kp UP    &trans     &trans         &kp RIGHT_BRACKET
-&trans     &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans       &trans       &kp LEFT  &kp DOWN  &kp RIGHT  &trans         &trans
-&trans     &trans  &trans     &mkp MB4   &mkp MB5   &bootloader  &bootloader  &trans    &trans    &trans     &kp BACKSLASH  &trans
-&trans     &trans  &trans     &trans     &trans     &macro       &trans       &trans                         &kp HOME       &kp END
+&kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5   &kp F6  &kp F7    &kp F8    &kp F9     &kp F10        &kp F11
+&trans     &trans  &trans  &trans  &trans  &kp F12  &trans  &trans    &kp UP    &trans     &trans         &kp RIGHT_BRACKET
+&trans     &trans  &trans  &trans  &trans  &trans   &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans         &trans
+&trans     &trans  &trans  &trans  &trans  &trans   &trans  &trans    &trans    &trans     &kp BACKSLASH  &trans
+&trans     &trans  &trans  &trans  &trans  &macro   &trans  &trans                         &kp HOME       &kp END
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
