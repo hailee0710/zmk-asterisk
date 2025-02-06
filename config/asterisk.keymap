@@ -46,6 +46,13 @@
         time-to-live-ms = <1750>;
     };
 
+    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        tap-ms = <20>;
+    };
+
     behaviors {
         lt: layer_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -116,7 +123,7 @@
 &kp LCTRL  &kp LGUI  &kp LALT  &kp CAPS  &kp BSPC  &kp ENTER  &kp DELETE  &kp SPACE                      &kp LEFT  &kp RIGHT
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         MOUSE {
@@ -130,7 +137,7 @@
 &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans                        &mkp LCLK  &mkp RCLK
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         SCROLL {
@@ -144,7 +151,7 @@
 &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans                        &mkp LCLK  &mkp RCLK
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         FUNC {
