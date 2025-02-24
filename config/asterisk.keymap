@@ -50,7 +50,7 @@
         lt: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <240>;
             quick-tap-ms = <150>;
             bindings = <&mo>, <&kp>;
@@ -102,12 +102,6 @@
         scroller_right {
             bindings = <&mo 2>;
             key-positions = <32 31>;
-            layers = <0>;
-        };
-
-        scroller_low {
-            bindings = <&mo 2>;
-            key-positions = <56 57>;
             layers = <0>;
         };
     };
