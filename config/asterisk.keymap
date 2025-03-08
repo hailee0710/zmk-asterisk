@@ -9,6 +9,8 @@
 #define MSC 2 // mouse scoll layer
 #define FN 3 //Function layer
 
+&mt { flavor = "tap-preferred"; };
+
 / {
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
