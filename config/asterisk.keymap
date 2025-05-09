@@ -121,7 +121,7 @@
 
         msk_back {
             bindings = <&mkp MB4>;
-            key-positions = <40 40 39 40>;
+            key-positions = <39 40>;
             layers = <0 1 2 3>;
         };
 
