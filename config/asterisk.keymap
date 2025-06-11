@@ -9,6 +9,9 @@
 #define MSC 2 // mouse scoll layer
 #define FN 3 //Function layer
 
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+#define ZMK_MOUSE_SCRL_VAL 140
+
 / {
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
