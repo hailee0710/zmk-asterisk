@@ -99,48 +99,64 @@
             bindings = <&mkp LCLK>;
             key-positions = <27 28>;
             layers = <0 1 3 2>;
+            require-prior-idle-ms = <50>;
+            timeout-ms = <20>;
         };
 
         ms-l-click-r {
             bindings = <&mkp LCLK>;
             key-positions = <31 32>;
             layers = <0 1 3 2>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <50>;
         };
 
         ms-r-click {
             bindings = <&mkp RCLK>;
             key-positions = <27 26>;
             layers = <0 1 3 2>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <50>;
         };
 
         ms-r-click-r {
             bindings = <&mkp RCLK>;
             key-positions = <32 33>;
             layers = <0 1 3 2>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <50>;
         };
 
         msk_back {
             bindings = <&mkp MB4>;
             key-positions = <39 40>;
             layers = <0 1 2 3>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <50>;
         };
 
         msk_forward {
             bindings = <&mkp MB5>;
             key-positions = <15 16>;
             layers = <0 1 2 3>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <50>;
         };
 
         msk_back_r {
             bindings = <&mkp MB4>;
             key-positions = <43 44>;
             layers = <0 1 2 3>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <50>;
         };
 
         msk_forward_r {
             bindings = <&mkp MB5>;
             key-positions = <19 20>;
             layers = <0 1 2 3>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <50>;
         };
     };
 
