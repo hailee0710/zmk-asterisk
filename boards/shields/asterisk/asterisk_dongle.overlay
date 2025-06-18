@@ -40,14 +40,14 @@
 
 &trackball_listener {
     status = "okay";
+};
 
-    &mmv_input_listener {
+&mmv_input_listener {
         layer = <0>;
         input-processors = <&zip_xy_scaler 1 4>;
     };
-    &msc_input_listener {
+&msc_input_listener {
         layer = <2>;
         input_processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT) &zip_xy_scaler 1 16>;
     };
-}
  
