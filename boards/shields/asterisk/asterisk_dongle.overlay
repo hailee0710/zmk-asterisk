@@ -20,18 +20,6 @@
         kscan = <&mock_kscan>;
 };
 
-/ {
-	vtrackball: virtual_input_trackball {
-		compatible = "zmk,virtual-input";
-	};
-
-	input_relay_config_trackball {
-		compatible = "zmk,split-peripheral-input-relay";
-		device = <&vtrackball>;
-		relay-channel = <102>;
-	};
-};
-
 &pro_micro_i2c {
     status = "okay";
     oled: sh1106@3c {
@@ -49,4 +37,17 @@
         prechargep = <0x22>;
     };
 }; 
+
+&trackball_listener {
+    status = "okay";
+
+    &mmv_input_listener {
+        layer = <0>;
+        input-processors = <&zip_xy_scaler 1 4>;
+    };
+    &msc_input_listener {
+        layer = <2>;
+        input_processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT) &zip_xy_scaler 1 16>;
+    };
+}
  
