@@ -48,6 +48,6 @@
     };
 &msc_input_listener {
         layer = <2>;
-        input_processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT) &zip_xy_scaler 1 16>;
+        input_processors = <&zip_xy_scaler 1 16>;
     };
  
