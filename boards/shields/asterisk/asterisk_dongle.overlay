@@ -38,6 +38,16 @@
     };
 }; 
 
+split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        trackball_split: trackball_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
+    };
+
 &trackball_listener {
     status = "okay";
     input-processors = <&zip_xy_scaler 1 4>;
@@ -45,6 +55,6 @@
     scroll{
         layer = <0>;
         input-processors = <&zip_xy_scaler 1 16>;
-    }
+    };
 };
  
