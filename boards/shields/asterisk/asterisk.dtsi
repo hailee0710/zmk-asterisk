@@ -58,12 +58,6 @@
         triggers-per-rotation = <20>;
     };
 
-    trackball_listener: trackball_listener {
-        compatible = "zmk,input-listener";
-        status = "disabled";
-        device = <&trackball_split>;
-    };
-
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "Asterisk";

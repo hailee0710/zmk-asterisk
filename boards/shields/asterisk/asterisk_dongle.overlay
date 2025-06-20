@@ -38,7 +38,8 @@
     };
 }; 
 
-split_inputs {
+/{
+    split_inputs {
         #address-cells = <1>;
         #size-cells = <0>;
 
@@ -48,13 +49,16 @@ split_inputs {
         };
     };
 
-&trackball_listener {
-    status = "okay";
-    input-processors = <&zip_xy_scaler 1 4>;
+      trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        status = "okay";
+        input-processors = <&zip_xy_scaler 1 4>;
+        device = <&trackball_split>;
 
-    scroll{
-        layer = <0>;
-        input-processors = <&zip_xy_scaler 1 16>;
+        scroll {
+            layer = <0>;
+            input-processors = <&zip_xy_scaler 1 16>;
+        };
     };
 };
  
