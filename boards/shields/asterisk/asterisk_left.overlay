@@ -1,5 +1,4 @@
 #include "asterisk.dtsi"
-#include "asterisk_3610.dtsi"
 
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
@@ -12,10 +11,4 @@
 
 &left_encoder {
     status = "okay";
-};
-
-/ {
-	vtrackball: virtual_input_trackball {
-		compatible = "zmk,virtual-input";
-	};
 };
