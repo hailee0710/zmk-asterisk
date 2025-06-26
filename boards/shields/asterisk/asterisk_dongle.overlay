@@ -1,10 +1,21 @@
 #include "asterisk.dtsi"
+#include "asterisk_3610.dtsi"
+
+&trackball_split {
+  status = "okay";
+};
+
+/* enable the listener on central */
+&trackball_listener {
+  status = "okay";
+};
 
 / {
     chosen {
         zmk,kscan = &mock_kscan;
         zephyr,display = &oled;
         zmk,physical-layout = &physical_layout0;
+        zmk,input-device    = &trackball_split;
     };
 
     mock_kscan: kscan_1 {
@@ -37,28 +48,4 @@
         prechargep = <0x22>;
     };
 }; 
-
-/{
-    split_inputs {
-        #address-cells = <1>;
-        #size-cells = <0>;
-
-        trackball_split: trackball_split@0 {
-            compatible = "zmk,input-split";
-            reg = <0>;
-        };
-    };
-
-      trackball_listener: trackball_listener {
-        compatible = "zmk,input-listener";
-        status = "okay";
-        input-processors = <&zip_xy_scaler 1 4>;
-        device = <&trackball_split>;
-
-        scroll {
-            layers = <2>;
-            input-processors = <&zip_xy_scaler 1 16>;
-        };
-    };
-};
  
