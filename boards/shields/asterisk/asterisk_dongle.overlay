@@ -52,11 +52,12 @@
       trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         status = "okay";
+        layer = <0>;
         input-processors = <&zip_xy_scaler 1 4>;
         device = <&trackball_split>;
 
         scroll {
-            layer = <0>;
+            layer = <2>;
             input-processors = <&zip_xy_scaler 1 16>;
         };
     };
