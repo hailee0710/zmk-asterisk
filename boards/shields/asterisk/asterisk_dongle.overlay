@@ -56,7 +56,7 @@
         device = <&trackball_split>;
 
         scroll {
-            layer = <2>;
+            layers = <2>;
             input-processors = <&zip_xy_scaler 1 16>;
         };
     };
